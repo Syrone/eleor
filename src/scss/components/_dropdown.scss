@@ -37,7 +37,6 @@
 
 			.icon {
 				transform: translateX(1rem);
-				transition: transform var(--_transition-duration) var(--_transition-type)
 			}
 
 			&.is-active {
@@ -70,6 +69,10 @@
 		--_color: var(--light-color);
 
 		text-transform: uppercase;
+
+		.icon {
+			transition: transform var(--_transition-duration) var(--_transition-type)
+		}
 
 		&.is-active {
 

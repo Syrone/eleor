@@ -73,6 +73,75 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="filter-mixitup">
+            <ul class="list-reset filter-mixitup-list">
+              <li>
+                <button type="button" class="btn btn-dark btn-dark-lg filter-mixitup-btn" data-filter=".category-a">
+                  ELEOR Profmatic
+                </button>
+              </li>
+              <li>
+                <button type="button" class="btn btn-dark btn-dark-lg filter-mixitup-btn" data-filter=".category-b">
+                  ELEOR Raydex
+                </button>
+              </li>
+              <li>
+                <button type="button" class="btn btn-dark btn-dark-lg filter-mixitup-btn" data-filter=".category-c">
+                  ELEOR Empire
+                </button>
+              </li>
+            </ul>
+
+            <ul class="list-reset content-mixitup">
+              <li class="mix category-a category-c">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a category-b">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a category-b">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-b">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-c">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-b category-c">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a category-b">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a category-c">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-c">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a category-b">
+                @include('partials/card.html')
+              </li>
+              <li class="mix category-a category-c">
+                @include('partials/card.html')
+              </li>
+            </ul>
+
+            <div class="content-mixitup-more">
+              <button type="button" class="btn btn-light btn-light-lg content-mixitup-btn">
+                Показать еще
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @include('partials/footer.html')
   </div>

@@ -48,7 +48,7 @@
 		flex-shrink: 0;
 	}
 
-	&:is(:hover, :focus-visible, :active, .is-active) {
+	&:is(:hover, :focus-visible, :active, .is-active, .mixitup-control-active) {
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
@@ -57,6 +57,66 @@
 			color: var(--_icon-color-active);
 		}
 	}
+}
+
+.btn-primary {
+	--_height: 2.5rem;
+	--_color: var(--light-color);
+	--_background-color: var(--background-color--gray);
+	--_border-radius: .5rem;
+	--_padding-x: 1.875rem;
+
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--background-color--dark);
+}
+
+.btn-dark {
+	--_height: 2.5rem;
+	--_color: var(--light-color);
+	--_background-color: var(--background-color--dark);
+	--_border-radius: .75rem;
+	--_padding-x: 2.5rem;
+
+	--_color-active: var(--dark-color);
+	--_background-color-active: var(--background-color--light);
+
+	&-lg {
+		--_height: 3.75rem;
+		--_font-size: 1.125rem;
+		--_padding-x: 3.75rem;
+	}
+}
+
+.btn-light {
+	--_height: 2.5rem;
+	--_color: var(--dark-color);
+	--_background-color: var(--background-color--light);
+	--_border-radius: .75rem;
+	--_padding-x: 2.5rem;
+
+	--_color-active: var(--light-color);
+	--_background-color-active: var(--background-color--dark);
+
+	&-lg {
+		--_height: 3.75rem;
+		--_font-size: 1.125rem;
+		--_padding-x: 3.75rem;
+	}
+}
+
+.btn-icon {
+	--_size: 2.5rem;
+	--_color: var(--dark-color);
+	--_background-color: transparent;
+	--_border-radius: .625rem;
+
+	--_icon-size: 1.5rem;
+	
+	--_color-active: var(--dark-color);
+	--_background-color-active: var(--background-color--lighter);
+
+	width: var(--_size);
+	height: var(--_size);
 }
 
 .btn-bag {

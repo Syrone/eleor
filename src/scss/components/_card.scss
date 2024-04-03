@@ -1,0 +1,133 @@
+.card {
+	--card-font-size: 1rem;
+	--card-font-weight: 400;
+	--card-line-height: normal;
+	--card-color: var(--light-color);
+	--card-background: transparent;
+	--card-border: 0;
+	--card-radius: 0;
+	--card-padding-y: 0;
+	--card-padding-x: 0;
+
+	width: 100%;
+	max-width: 18.75rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: var(--card-font-size);
+	font-weight: var(--card-font-weight);
+	line-height: var(--card-line-height);
+	color: var(--card-color);
+	background-color: var(--card-background);
+	border: var(--card-border);
+	border-radius: var(--card-radius);
+	padding: var(--card-padding-y) var(--card-padding-x);
+
+	&__counter {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		padding: .625rem;
+		position: absolute;
+		z-index: 1;
+
+		&-form {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--background-color--lighter);
+			margin: .625rem;
+			border-radius: .75rem;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: 2;
+			transform: translateX(2rem);
+			transition: opacity calc(var(--transition-duration) * 1.25) var(--transition-type), visibility var(--transition-duration) var(--transition-type), transform var(--transition-duration) var(--transition-type);
+		}
+
+		&-field {
+			width: 2ch;
+			max-width: 8ch;
+			line-height: 1.5;
+			height: 100%;
+			background-color: transparent;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: none;
+			text-align: center;
+		}
+
+		&.is-active {
+
+			.card__counter-form {
+				opacity: 1;
+				visibility: visible;
+				transform: initial;
+			}
+		}
+	}
+
+	&__picture {
+		height: 25.625rem;
+		display: grid;
+		place-content: center;
+		background-color: var(--background-color--light);
+		margin-block-end: 1.25rem;
+		border-radius: 1rem;
+		padding: 3.75rem 1rem;
+		position: relative;
+		z-index: 1;
+
+		&:is(:hover, :focus-visible, :active, .is-active) {
+
+			.card__counter {
+
+				&-btn {
+					--_background-color: var(--background-color--lighter);
+				}
+			}
+		}
+	}
+
+	&__image {
+		display: block;
+		object-fit: contain;
+	}
+
+	&__articule {
+		font-size: .75rem;
+		color: var(--gray-color);
+		position: absolute;
+		right: 1rem;
+		bottom: .875rem;
+	}
+
+	&__title {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		
+		min-height: 2.125rem;
+		font-size: .875rem;
+		font-weight: 400;
+		line-height: normal;
+		margin-block-end: 1.25rem;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	&__price {
+		font-weight: 700;
+		line-height: 1.5;
+	}
+}

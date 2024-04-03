@@ -1,0 +1,48 @@
+.filter-mixitup {
+	display: grid;
+	gap: var(--section-offset);
+
+	&-list {
+		display: flex;
+		align-items: stretch;
+		gap: 1.875rem;
+		margin-block-end: -.5rem;
+		padding-block-end: .5rem;
+		overflow-y: hidden;
+		overflow-x: auto;
+
+		&::-webkit-scrollbar {
+			width: .375rem;
+			height: .375rem;
+			border-radius: 1rem;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--background-color--darker);
+			border-radius: 1rem;
+		}
+
+		&::-webkit-scrollbar-thumb:hover {
+			background-color: var(--background-color--dark);
+		}
+	}
+}
+
+.content-mixitup {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.875rem;
+
+	.card {
+		max-width: 100%;
+	}
+
+	&-more {
+		display: flex;
+		justify-content: center;
+	}
+}
