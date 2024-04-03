@@ -1,0 +1,31 @@
+.field {
+	--field-height: 2.5rem;
+	--field-font-size: 1rem;
+	--field-font-weight: 400;
+	--field-line-height: normal;
+	--field-color: var(--dark-color);
+	--field-background: var(--background-color--light);
+	--field-border: 0;
+	--field-radius: 2rem;
+	--field-padding-y: .25rem;
+	--field-padding-x: 1.25rem;
+	--field-icon-size: 1rem;
+	--field-icon-color: currentColor;
+
+	width: 100%;
+	min-height: var(--field-height);
+	display: block;
+	font-size: var(--field-font-size);
+	font-weight: var(--field-font-weight);
+	line-height: var(--field-line-height);
+	color: var(--field-color);
+	background-color: var(--field-background);
+	border: var(--field-border);
+	border-radius: var(--field-radius);
+	padding: var(--field-padding-y) var(--field-padding-x);
+
+	.icon {
+		--_i-size: var(--field-icon-size);
+		--_i-color: var(--field-icon-color);
+	}
+}

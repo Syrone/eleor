@@ -1,0 +1,41 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Roboto", sans-serif;
+  --content-width: 80.625rem;
+  --container-offset: 1.25rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --dark-color: #201f1d;
+  --dark-color-rgba--15: rgba(32, 31, 29, 0.15);
+  --light-color: #fff;
+  --gray-color: #817b73;
+  --gray-color--light: #c0bdb9;
+  --gray-color--lighter: #dfdedc;
+
+  // background
+  --background-color: #34312e;
+  --background-color--light: #fff;
+  --background-color--dark: #201f1d;
+  --background-color--darker: #262522;
+  --background-color--gray: #817b73;
+
+  --background-overlay-rgba: rgba(32, 31, 29, 0.5);
+
+  // section
+  --section-offset: 3.75rem;
+
+  // transition
+  --transition-duration: 300ms;
+  --transition-type: ease-in-out;
+
+  // swiper
+  --swiper-navigation-size: 2.5rem;
+  --swiper-theme-color: var(--dark-color);
+  --swiper-pagination-bullet-size: .625rem;
+  --swiper-pagination-color: var(--background-color--light);
+  --swiper-pagination-bullet-inactive-color: transparent;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}

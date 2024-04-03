@@ -1,0 +1,25 @@
+.search {
+	position: relative;
+	z-index: 1;
+
+	&__form {
+		width: calc((var(--content-width) - 59.1875rem));
+		height: 100%;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-3rem);
+		transition: transform var(--transition-duration) var(--transition-type), opacity calc(var(--transition-duration) * 1.25) var(--transition-type), visibility var(--transition-duration) var(--transition-type);
+	}
+
+	&.is-active {
+
+		.search__form {
+			opacity: 1;
+			visibility: visible;
+			transform: initial;
+		}
+	}
+}

@@ -1,0 +1,89 @@
+.btn {
+	--_height: auto;
+	--_font-size: 1rem;
+	--_font-weight: 400;
+	--_line-height: normal;
+	--_color: var(--gray-color--light);
+	--_background-color: transparent;
+	--_border: 0;
+	--_border-radius: 0;
+	--_padding-y: 0;
+	--_padding-x: 0;
+
+	--_icon-size: 1rem;
+	--_icon-color: currentColor;
+
+	--_transition-duration: var(--transition-duration);
+	--_transition-type: var(--transition-type);
+
+	--_color-active: var(--light-color);
+	--_background-color-active: transparent;
+	--_border-color-active: transparent;
+	--_icon-color-active: currentColor;
+
+	width: max-content;
+	height: var(--_height);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .625rem;
+
+	font-size: var(--_font-size);
+	font-weight: var(--_font-weight);
+	line-height: var(--_line-height);
+	color: var(--_color);
+	background-color: var(--_background-color);
+	border: var(--_border);
+	border-radius: var(--_border-radius);
+	padding: var(--_padding-y) var(--_padding-x);
+	transition: color var(--_transition-duration) var(--_transition-type), background var(--_transition-duration) var(--_transition-type), border var(--_transition-duration) var(--_transition-type), transform var(--_transition-duration) var(--_transition-type);
+	cursor: pointer;
+	outline: none;
+
+	.icon {
+		width: var(--_icon-size);
+		height: var(--_icon-size);
+		color: var(--_icon-color);
+		flex-shrink: 0;
+	}
+
+	&:is(:hover, :focus-visible, :active, .is-active) {
+		color: var(--_color-active);
+		background-color: var(--_background-color-active);
+		border-color: var(--_border-color-active);
+
+		.icon {
+			color: var(--_icon-color-active);
+		}
+	}
+}
+
+.btn-bag {
+	position: relative;
+	z-index: 1;
+
+	&::after {
+		content: attr(data-bag-current);
+		display: block;
+		font-size: .75rem;
+		font-weight: 500;
+		color: var(--dark-color);
+		background-color: var(--background-color--light);
+		border-radius: 1.5rem;
+		padding: .125rem .5rem;
+		opacity: 0;
+		position: absolute;
+		top: -.125rem;
+		right: calc(100% - .625rem);
+		z-index: -1;
+		transition: opacity var(--transition-duration) var(--transition-type);
+	}
+
+	&:is(:hover, :focus-visible, :active, .is-active) {
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}

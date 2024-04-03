@@ -1,0 +1,10 @@
+.burger {
+	@include burger;
+
+	--_background-color: var(--background-color--darker);
+	--_border-radius: 50%;
+	--_padding-y: .75rem;
+	--_padding-x: .75rem;
+
+	--_background-color-active: var(--background-color--darker);
+}
