@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination, Thumbs } from 'swiper';
-Swiper.use([ Navigation, Pagination, Thumbs ]);
+import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
+Swiper.use([ Navigation, Pagination, Thumbs, Autoplay ]);
 
 const swiperHeroClass = document.querySelectorAll('.swiper-hero')
 
@@ -13,6 +13,7 @@ swiperHeroClass?.forEach((classSwiper) => {
 		slidesPerView: 1,
 		grabCursor: true,
 		loop: true,
+		autoplay : true,
 
 		navigation: {
 			prevEl: navPrev,

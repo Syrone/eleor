@@ -1,0 +1,94 @@
+.graph-modal {
+	--_modal-radius: 1rem;
+	--_modal-padding-y: 2.5rem;
+	--_modal-padding-x: 2.5rem;
+	background-color: var(--background-overlay-rgba);
+
+	&::before {
+		all: unset;
+	}
+
+	&__close {
+		--_color: var(--light-color);
+		--_background-color: var(--background-color--darker);
+
+		--_icon-size: 1.25rem;
+
+		background-image: initial;
+		position: static;
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 31.25rem;
+		min-height: calc(100% - 100px);
+
+		align-items: center;
+		background-color: transparent;
+		padding: 0;
+		pointer-events: none;
+
+		&.graph-modal-open {
+			display: flex;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		padding: 0;
+		pointer-events: auto;
+		position: relative;
+		overflow: hidden;
+	}
+	
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		background-color: var(--background-color--dark);
+		border-radius: var(--_modal-radius) var(--_modal-radius) 0 0;
+		padding: calc(var(--_modal-padding-y) / 1.6) var(--_modal-padding-x);
+	}
+
+	&__cart,
+	&__body {
+		color: var(--dark-color);
+	}
+
+	&__body,
+	&__footer {
+		background-color: var(--background-color--light);
+	}
+
+	&__cart {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		background-color: #f3f2f1;
+		padding: calc(var(--_modal-padding-y) / 1.6) var(--_modal-padding-x);
+	}
+
+	&__body {
+		padding: var(--_modal-padding-y) var(--_modal-padding-x);
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: center;
+		border-radius: 0 0 var(--_modal-radius) var(--_modal-radius);
+		padding: 0 var(--_modal-padding-x) var(--_modal-padding-y);
+	}
+
+	&__title {
+		color: var(--dark-color);
+		margin-block-end: 1.875rem;
+	}
+
+	&__submit {
+		--_color-active: var(--light-color);
+		--_background-color-active: var(--gray-color);
+	}
+
+}

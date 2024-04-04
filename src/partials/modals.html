@@ -1,0 +1,64 @@
+<div class="graph-modal">
+	<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-card">
+		<div class="graph-modal__content">
+			<div class="graph-modal__header">
+				<div class="logo">
+					<a href="./index.html" class="btn logo__link">
+						<picture>
+							<source srcset="./img/logo@2x.webp" type="image/webp">
+							<img loading="lazy" src="./img/logo@2x.png" class="logo__image image" width="103" height="44" alt="Картинка">
+						</picture>
+					</a>
+				</div>
+
+				<button class="btn btn-icon js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+					<span class="icon graph-modal__close-icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			
+			<div class="graph-modal__cart">
+				<span class="graph-modal__cart-value">
+					Выбрано товаров: 2
+				</span>
+
+				<a href="#" class="btn btn-secondary graph-modal__cart-btn">
+					В корзину
+				</a>
+			</div>
+
+			<form>
+				<div class="graph-modal__body">
+					<h2 class="h2 graph-modal__title">
+						Запросить предложение
+					</h2>
+	
+					<div class="field-wrapper">
+						<input type="text" class="field field--bottom graph-modal__field" name="name" placeholder="Имя" required>
+					</div>
+						
+					<div class="field-wrapper">
+						<input type="tel" class="field field--bottom graph-modal__field" name="tel" placeholder="Телефон" required>
+					</div>
+						
+					<div class="field-wrapper">
+						<input type="email" class="field field--bottom graph-modal__field" name="email" placeholder="E-mail" required>
+					</div>
+
+					<div class="field-agree">
+						Нажимая «Отправить», я даю свое согласие на обработку <a href="#" class="btn btn-inherit">персональных данных</a>.
+					</div>
+				</div>
+	
+				<div class="graph-modal__footer">
+					<button type="submit" class="btn btn-dark btn-dark-lg graph-modal__submit">
+						Отправить
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

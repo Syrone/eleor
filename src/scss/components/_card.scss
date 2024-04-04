@@ -23,6 +23,11 @@
 	border-radius: var(--card-radius);
 	padding: var(--card-padding-y) var(--card-padding-x);
 
+	&__link {
+		position: absolute;
+		inset: 0;
+	}
+
 	&__counter {
 		width: 100%;
 		display: flex;
@@ -118,6 +123,7 @@
 		font-weight: 400;
 		line-height: normal;
 		margin-block-end: 1.25rem;
+		position: relative;
 	}
 
 	&__bottom {

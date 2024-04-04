@@ -1,0 +1,18 @@
+.user {
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		margin-inline-start: auto;
+	}
+
+	&__link {
+		--_background-color: var(--background-color--darker);
+		--_border-radius: 50%;
+		--_padding-y: .75rem;
+		--_padding-x: .75rem;
+
+		--_background-color-active: var(--background-color--darker);
+	}
+}

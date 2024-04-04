@@ -1,0 +1,17 @@
+.logo {
+	width: max-content;
+	display: grid;
+	place-content: center;
+
+	&__link {
+		--_color: var(--light-color);
+	}
+
+	&__image {
+		display: block;
+		max-height: 2.75rem;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}

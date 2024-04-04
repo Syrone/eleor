@@ -6,3 +6,4 @@ import './components/transfer.js';
 import './components/swipers.js';
 import './components/mixitup.js';
 import './components/counter.js';
+import './components/modals.js';

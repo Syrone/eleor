@@ -422,8 +422,14 @@
 		font-size: 1.75rem;
 	}
 
+	h2,
+	.h2 {
+		font-size: 1.25rem;
+	}
+
 	// buttons
-	.btn-primary {
+	.btn-primary,
+	.btn-secondary {
 		--_height: 1.875rem;
 		--_font-size: 0.875rem;
 		--_padding-x: 1.25rem;
@@ -471,6 +477,36 @@
 		.swiper-pagination-fraction {
 			right: calc(var(--container-offset) + 1rem);
 			bottom: 1rem;
+		}
+	}
+
+	// fields
+	.field-wrapper {
+
+		+ .field-wrapper {
+			margin-block-start: .5rem;
+		}
+	}
+
+	.field--bottom {
+		--field-height: 2rem;
+		--field-font-size: .875rem;
+	}
+
+	.field-agree {
+		margin-block-start: 1.5rem;
+	}
+
+	// modals
+	.graph-modal {
+		--_modal-radius: .75rem;
+		--_modal-padding-y: 1.75rem;
+		--_modal-padding-x: 1.75rem;
+
+		font-size: .875rem;
+
+		&__container {
+			max-width: 25rem;
 		}
 	}
 

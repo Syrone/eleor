@@ -1,3 +1,11 @@
+.field-wrapper {
+	position: relative;
+
+	+ .field-wrapper {
+		margin-block-start: .75rem;
+	}
+}
+
 .field {
 	--field-height: 2.5rem;
 	--field-font-size: 1rem;
@@ -28,4 +36,25 @@
 		--_i-size: var(--field-icon-size);
 		--_i-color: var(--field-icon-color);
 	}
+}
+
+.field--bottom {
+	--field-height: 2.75rem;
+	--field-border: 1px solid var(--gray-color--light);
+	--field-radius: 0;
+	--field-padding-x: 0;
+
+	border: 0;
+	border-bottom: var(--field-border);
+	outline: none;
+
+	&::placeholder {
+		color: var(--field-color);
+	}
+}
+
+.field-agree {
+	font-size: .625rem;
+	color: var(--gray-color--light);
+	margin-block-start: 2rem;
 }
