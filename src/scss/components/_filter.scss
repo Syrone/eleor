@@ -1,6 +1,4 @@
 .filter-mixitup {
-	display: grid;
-	gap: var(--section-offset);
 
 	&-list {
 		display: flex;
@@ -10,20 +8,5 @@
 		padding-block-end: .5rem;
 		overflow-y: hidden;
 		overflow-x: auto;
-	}
-}
-
-.content-mixitup {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 1.875rem;
-
-	.card {
-		max-width: 100%;
-	}
-
-	&-more {
-		display: flex;
-		justify-content: center;
 	}
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">
+        Название страницы
+      </h1>
+
+      <section class="section section-main">
+        <div class="container">
+          <div class="page-header">
+            <h2 class="h2 page-title">
+              Коллекция ELEOR Profmatic
+            </h2>
+
+            <span class="page-current">
+              41 товаров
+            </span>
+          </div>
+
+          <div class="category">
+            <ul class="list-reset category__list">
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+              <li class="category__item">
+                @include('partials/card.html')
+              </li>
+            </ul>
+
+            <div class="category__more">
+              <button type="button" class="btn btn-light btn-light-lg category__btn">
+                Показать еще
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

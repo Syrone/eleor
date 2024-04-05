@@ -4,8 +4,10 @@
   // base
   --font-family: "Roboto", sans-serif;
   --content-width: 80.625rem;
+  --content-width-lg: 60rem;
   --container-offset: 1.25rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-lg: calc(var(--content-width-lg) + (var(--container-offset) * 2));
 
   // colors
   --dark-color: #201f1d;
@@ -22,6 +24,7 @@
   --background-color--dark: #201f1d;
   --background-color--darker: #262522;
   --background-color--gray: #817b73;
+  --background-color--grayer: #f3f2f1;
 
   --background-overlay-rgba: rgba(32, 31, 29, 0.5);
 

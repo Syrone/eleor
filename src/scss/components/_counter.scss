@@ -48,3 +48,20 @@
 		}
 	}
 }
+
+.counter--visually {
+	width: 7.5rem;
+	min-width: unset;
+	flex-shrink: 0;
+
+	.counter {
+
+		&-form {
+			width: 100%;
+			opacity: unset;
+			visibility: unset;
+			position: unset;
+			transform: unset;
+		}
+	}
+}

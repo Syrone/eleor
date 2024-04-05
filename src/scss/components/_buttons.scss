@@ -48,7 +48,7 @@
 		flex-shrink: 0;
 	}
 
-	&:is(:hover, :focus-visible, :active, .is-active, .mixitup-control-active) {
+	&:is(:focus-visible, :active, .is-active, .mixitup-control-active) {
 		color: var(--_color-active);
 		background-color: var(--_background-color-active);
 		border-color: var(--_border-color-active);
@@ -194,6 +194,19 @@
 }
 
 @media (hover: hover) {
+
+	.btn {
+
+		&:hover {
+			color: var(--_color-active);
+			background-color: var(--_background-color-active);
+			border-color: var(--_border-color-active);
+	
+			.icon {
+				color: var(--_icon-color-active);
+			}
+		}
+	}
 
 	.btn-bag {
 

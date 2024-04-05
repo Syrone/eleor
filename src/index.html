@@ -7,7 +7,11 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      <section class="section section-main">
+      <h1 class="visually-hidden">
+        Название страницы
+      </h1>
+
+      <section class="section section-hero">
         <div class="wrapper-swiper swiper-hero">
           <div class="swiper">
             <div class="swiper-wrapper">
@@ -76,7 +80,7 @@
 
       <section class="section">
         <div class="container">
-          <div class="filter-mixitup">
+          <div class="filter-mixitup category">
             <ul class="list-reset filter-mixitup-list">
               <li>
                 <button type="button" class="btn btn-dark btn-dark-lg filter-mixitup-btn" data-filter=".category-a">
@@ -95,7 +99,7 @@
               </li>
             </ul>
 
-            <ul class="list-reset content-mixitup">
+            <ul class="list-reset category__list">
               <li class="mix category-a category-c">
                 @include('partials/card.html')
               </li>
@@ -134,8 +138,8 @@
               </li>
             </ul>
 
-            <div class="content-mixitup-more">
-              <button type="button" class="btn btn-light btn-light-lg content-mixitup-btn">
+            <div class="category__more">
+              <button type="button" class="btn btn-light btn-light-lg category__btn">
                 Показать еще
               </button>
             </div>

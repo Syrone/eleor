@@ -101,3 +101,67 @@
 		line-height: 1.5;
 	}
 }
+
+.card--bag {
+	--card-color: var(--dark-color);
+	--card-background: var(--background-color--light);
+	--card-radius: 1rem;
+	--card-padding-y: 1rem;
+	--card-padding-x: 1.875rem;
+
+	max-width: unset;
+	flex-direction: row;
+	gap: .625rem;
+	padding-inline-start: calc(var(--card-padding-x) / 2.25);
+	position: relative;
+
+	.card {
+
+		&__picture {
+			width: 5.625rem;
+			height: 5.625rem;
+			display: block;
+			flex-shrink: 0;
+			margin-block-end: 0;
+			padding: .625rem;
+		}
+		
+		&__image {
+			width: 100%;
+			height: 100%;
+		}
+
+		&__info {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+		}
+
+		&__title {
+			max-width: 24rem;
+			min-height: unset;
+			font-size: var(--card-font-size);
+			line-height: 1.3;
+			color: var(--card-color);
+			margin-block-end: 0;
+		}
+
+		&__bottom {
+			gap: 1.875rem;
+			flex-shrink: 0;
+		}
+
+		&__remove {
+			--_background-color: var(--background-color--grayer);
+		}
+	}
+
+	&__counter {
+
+		&-form {
+			background-color: var(--background-color--grayer);
+		}
+	}
+}

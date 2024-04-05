@@ -1,0 +1,19 @@
+.category {
+	display: grid;
+	gap: var(--section-offset);
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.875rem;
+
+		.card {
+			max-width: 100%;
+		}
+	}
+
+	&__more {
+		display: flex;
+		justify-content: center;
+	}
+}

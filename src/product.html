@@ -7,8 +7,12 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
+
+      <h1 class="visually-hidden">
+        Название страницы
+      </h1>
       
-      <section class="section section-product">
+      <section class="section section-main">
         <div class="container">
           <div class="product">
             <div class="product__start">
@@ -102,9 +106,6 @@
                   <p>
                     Наши менеджеры помогут выбрать оборудование, подходящее именно Вам, а также проконсультируют о способах ухода за изделиями из нержавеющей стали.
                   </p>
-                  <p>
-                    Наши менеджеры помогут выбрать оборудование, подходящее именно Вам, а также проконсультируют о способах ухода за изделиями из нержавеющей стали.
-                  </p>
                 </div>
 
                 <div class="product__description-bottom product__more-bottom">
@@ -135,7 +136,7 @@
                       16 990 Р
                     </span>
 
-                    <button class="btn btn-primary btn-primary-lg product__price-btn">
+                    <button class="btn btn-primary btn-primary-lg product__price-btn" data-graph-path="modal-card">
                       Купить
                     </button>
                   </div>
@@ -326,9 +327,9 @@
           </div>
 
           <div class="section-button">
-            <button type="button" class="btn btn-light btn-light-lg">
+            <a href="./category.html" class="btn btn-light btn-light-lg">
               Все товары коллекции
-            </button>
+            </a>
           </div>
         </div>
       </section>

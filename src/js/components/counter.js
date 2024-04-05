@@ -55,7 +55,7 @@ counters?.forEach((wrapper) => {
 		setInputWidth()
   };
 	
-  counterBtn.addEventListener('click', handleAddActiveClass);
+  counterBtn?.addEventListener('click', handleAddActiveClass);
   document.addEventListener('keydown', handleEscapeKey);
   document.addEventListener('click', handleClickOutside);
   window.addEventListener('popstate', handleBackButton);

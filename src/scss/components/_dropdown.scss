@@ -4,21 +4,28 @@
 	&.is-active {
 
 		> .dropdown-content {
-			display: block;
+			pointer-events: auto;
+			visibility: visible;
+			opacity: 1;
+			transform: initial;
 		}
 	}
 
 	&-content {
 		min-width: 12.5rem;
 		width: calc(100% + 5rem);
-		display: none;
 		background-color: var(--background-color--light);
-		margin-block-start: 2rem;
+		margin-block-start: 2.1rem;
 		border-radius: 0 0 .75rem .75rem;
+		pointer-events: none;
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(1rem);
 		position: absolute;
 		top: 100%;
 		left: -2.5rem;
 		z-index: 10;
+		transition: transform var(--transition-duration) var(--transition-type), opacity calc(var(--transition-duration) * 1.25) var(--transition-type), visibility var(--transition-duration) var(--transition-type);
 
 		&.is-active {
 			border-radius: 0 0 0 .75rem;
@@ -29,7 +36,7 @@
 			--_padding-y: 1.25rem;
 			--_padding-x: 2.5rem;
 
-			--_color-active: var(--dark-color);
+			--_color-active: var(--gray-color);
 
 			width: 100%;
 			justify-content: space-between;

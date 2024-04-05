@@ -1,0 +1,54 @@
+.bag {
+	display: grid;
+	gap: 2.5rem;
+	color: var(--dark-color);
+	background-color: var(--background-color--lighter);
+	border-radius: 1rem;
+	padding: 1.25rem 1.25rem 2.5rem;
+
+	&__list {
+		display: grid;
+		gap: .625rem;
+	}
+
+	&__total {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: .25rem 1rem;
+		line-height: 1.5;
+		background-color: var(--background-color--grayer);
+		border-radius: 1rem;
+		padding: 2rem 2.5rem;
+	
+		&-value {
+			font-weight: 500;
+			white-space: nowrap;
+		}
+	}
+
+	&__form {
+		display: grid;
+		gap: 2.5rem;
+		max-width: 31.25rem;
+		margin-inline: auto;
+		background-color: var(--background-color--light);
+		border-radius: 1rem;
+		padding: 2.5rem;
+
+		&-title {
+			color: inherit;
+		}
+
+		&-bottom {
+			display: grid;
+			place-content: center;
+		}
+
+		&-submit {
+			--_color-active: var(--light-color);
+			--_background-color-active: var(--gray-color);
+		}
+	}
+}

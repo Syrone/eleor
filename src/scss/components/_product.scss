@@ -5,7 +5,7 @@
 	grid-template-columns: repeat(2, calc(50% - var(--product-gap) / 2));
 	gap: var(--product-gap);
 	border-bottom: .125rem solid var(--background-color--gray);
-	padding-block: var(--section-offset);
+	padding-block-end: var(--section-offset);
 
 	&__more {
 		color: var(--dark-color);
@@ -21,6 +21,16 @@
 			max-height: var(--descr-height-overflow);
 			overflow: hidden;
 			transition: max-height var(--transition-duration) var(--transition-type);
+
+			> * {
+				opacity: 0;
+				transition: opacity calc(var(--transition-duration) * 10) ease-out;
+
+				&.is-show {
+					opacity: 1;
+					transition: opacity calc(var(--transition-duration) / 3) ease-in;
+				}
+			}
 		}
 
 		&-bottom {

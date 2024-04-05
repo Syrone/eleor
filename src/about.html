@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">
+        Название страницы
+      </h1>
+
+      <section class="section section-main">
+        <div class="container-lg">
+          <div class="page-header">
+            <h2 class="h2 page-title page-title--center">
+              О компании
+            </h2>
+          </div>
+
+          <div class="about">
+            <picture>
+              <source srcset="./img/logo-2.webp" type="image/webp">
+              <img loading="lazy" src="./img/logo-2.png" class="about__image image" width="375" height="100" alt="Картинка">
+            </picture>
+
+            <div class="about__content">
+              <p>
+                Группа компаний Conexus – крупнейший представитель рынка поставок санитарно-гигиенического оборудования с собственным интернет-магазином Dispensator.ru.
+              </p>
+              <p>
+                Мы специализируемся на подборе, оснащении общественных пространств оборудованием для гигиены и расходными материалами. Занимаем узкоспециализированную нишу, осуществляем поставки федерального уровня и представляем продукцию высшего качества.
+              </p>
+              <p>
+                Наша проектно-техническая команда осуществляет монтаж оборудования. Мы знаем особенности работ на объекте на разных этапах ввода в эксплуатацию. Работаем со строительными компаниями, оснащая объекты и консультируя на всех этапах реализации проекта, государственными и любыми коммерческими компаниями по всей РФ.
+              </p>
+              <p>
+                ELEOR – партнерство и сервисное превосходство.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

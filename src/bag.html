@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="visually-hidden">
+        Название страницы
+      </h1>
+
+      <section class="section section-main">
+        <div class="container-lg">
+          <div class="page-header">
+            <h2 class="h2 page-title page-title--center">
+              Корзина
+            </h2>
+          </div>
+
+          <div class="bag">
+            <ul class="list-reset bag__list">
+              <li class="bag__item">
+                @include('partials/card--bag.html')
+              </li>
+              <li class="bag__item">
+                @include('partials/card--bag.html')
+              </li>
+              <li class="bag__item">
+                @include('partials/card--bag.html')
+              </li>
+              <li class="bag__item">
+                <div class="bag__total">
+                  <span>
+                    Количество товаров: 
+                    <span class="bag__total-value">
+                      4
+                    </span>
+                  </span>
+                  <span>
+                    Стоимость товаров: 
+                    <span class="bag__total-value">
+                      132 990 Р
+                    </span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+
+            <form class="bag__form">
+              <div class="bag__form-content">
+                <h2 class="h2 bag__form-title">
+                  Запросить предложение
+                </h2>
+        
+                <div class="field-wrapper">
+                  <input type="text" class="field field--bottom graph-modal__field" name="name" placeholder="Имя" required>
+                </div>
+                  
+                <div class="field-wrapper">
+                  <input type="tel" class="field field--bottom graph-modal__field" name="tel" placeholder="Телефон" required>
+                </div>
+                  
+                <div class="field-wrapper">
+                  <input type="email" class="field field--bottom graph-modal__field" name="email" placeholder="E-mail" required>
+                </div>
+      
+                <div class="field-agree">
+                  Нажимая «Отправить», я даю свое согласие на обработку <a href="#" class="btn btn-inherit text-underline">персональных данных</a>.
+                </div>
+              </div>
+        
+              <div class="bag__form-bottom">
+                <button type="submit" class="btn btn-dark btn-dark-lg bag__form-submit">
+                  Отправить
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
