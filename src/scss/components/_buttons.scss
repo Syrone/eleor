@@ -68,6 +68,12 @@
 
 	--_color-active: var(--light-color);
 	--_background-color-active: var(--background-color--dark);
+
+	&-lg {
+		--_height: 3.75rem;
+		--_font-size: 1.125rem;
+		--_padding-x: 3.125rem;
+	}
 }
 
 .btn-secondary {
@@ -113,6 +119,28 @@
 		--_font-size: 1.125rem;
 		--_padding-x: 3.75rem;
 	}
+}
+
+.btn-more {
+
+	.icon {
+		transition: transform var(--_transition-duration) var(--_transition-type);
+	}
+
+	&.is-open {
+
+		.icon {
+			transform: rotateX(180deg);
+		}
+	}
+}
+
+.btn-light--icon {
+	--_padding-x: 1.875rem;
+
+	--_icon-size: 1.5rem;
+
+	gap: .875rem;
 }
 
 .btn-inherit {

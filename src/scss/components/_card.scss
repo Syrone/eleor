@@ -29,51 +29,15 @@
 	}
 
 	&__counter {
-		width: 100%;
-		display: flex;
 		justify-content: flex-end;
 		padding: .625rem;
+		pointer-events: none;
 		position: absolute;
 		z-index: 1;
 
 		&-form {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
 			background-color: var(--background-color--lighter);
 			margin: .625rem;
-			border-radius: .75rem;
-			opacity: 0;
-			visibility: hidden;
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			z-index: 2;
-			transform: translateX(2rem);
-			transition: opacity calc(var(--transition-duration) * 1.25) var(--transition-type), visibility var(--transition-duration) var(--transition-type), transform var(--transition-duration) var(--transition-type);
-		}
-
-		&-field {
-			width: 2ch;
-			max-width: 8ch;
-			line-height: 1.5;
-			height: 100%;
-			background-color: transparent;
-			margin: 0;
-			padding: 0;
-			border: 0;
-			outline: none;
-			text-align: center;
-		}
-
-		&.is-active {
-
-			.card__counter-form {
-				opacity: 1;
-				visibility: visible;
-				transform: initial;
-			}
 		}
 	}
 

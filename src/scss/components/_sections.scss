@@ -4,4 +4,18 @@
 	&-main {
 		margin-block-start: 2rem;
 	}
+
+	&-header {
+		margin-block-end: 1.875rem;
+	}
+
+	&-title {
+		margin-block-end: 0;
+	}
+
+	&-button {
+		display: flex;
+		justify-content: center;
+		margin-block-start: var(--section-offset);
+	}
 }

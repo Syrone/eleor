@@ -1,0 +1,127 @@
+.product {
+	--product-gap: 5.625rem;
+
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - var(--product-gap) / 2));
+	gap: var(--product-gap);
+	border-bottom: .125rem solid var(--background-color--gray);
+	padding-block: var(--section-offset);
+
+	&__more {
+		color: var(--dark-color);
+		background-color: var(--background-color--lighter);
+		border-radius: 1rem;
+		padding: 2.5rem;
+
+		&-title {
+			color: inherit;
+		}
+
+		&-content {
+			max-height: var(--descr-height-overflow);
+			overflow: hidden;
+			transition: max-height var(--transition-duration) var(--transition-type);
+		}
+
+		&-bottom {
+			margin-block-start: 2.5rem;
+		}
+
+		&.is-open {
+
+			.product__more-content {
+				max-height: var(--descr-height-full);
+			}
+		}
+	}
+	
+	&__description {
+		margin-block-start: var(--section-offset);
+	}
+
+	&__characteristics {
+
+		&-title {
+			margin-block-end: 1.25rem;
+		}
+
+		&-item {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding-block: 1rem;
+
+			&:not(:first-child) {
+				border-top: .0625rem solid var(--gray-color--light);
+			}
+		}
+
+		&-value {
+			text-align: right;
+		}
+	}
+
+	&__end {
+		display: flex;
+		flex-direction: column;
+		gap: var(--section-offset);
+	}
+
+	&__info {
+		border: .125rem solid var(--background-color--gray);
+		border-radius: 1rem;
+		padding: 2.5rem;
+		position: relative;
+
+		&-title {
+			line-height: 1.5;
+		}
+
+		&-bottom {
+			display: flex;
+			align-items: center;
+			gap: 1.25rem;
+		}
+
+		&-articule {
+			font-size: .875rem;
+			line-height: 1;
+			color: var(--gray-color);
+			position: absolute;
+			right: 1rem;
+			bottom: 1rem;
+		}
+	}
+
+	&__price {
+		display: flex;
+		align-items: stretch;
+		flex-shrink: 0;
+		font-size: 1.125rem;
+		background-color: var(--background-color--darker);
+		border-radius: .5rem;
+
+		&-value {
+			display: grid;
+			place-content: center;
+			padding: .5rem 1.875rem;
+		}
+
+		&-btn {
+			--_color-active: var(--dark-color);
+			--_background-color-active: var(--background-color--light);
+		}
+	}
+
+	&__counter {
+		width: 7.5rem;
+
+		&-btn {
+			--_background-color: var(--background-color--light);
+
+			--_color-active: var(--light-color);
+			--_background-color-active: var(--background-color--darker);
+		}
+	}
+
+}

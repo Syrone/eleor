@@ -1,7 +1,9 @@
 import Swiper, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
 Swiper.use([ Navigation, Pagination, Thumbs, Autoplay ]);
 
-const swiperHeroClass = document.querySelectorAll('.swiper-hero')
+const swiperHeroClass = document.querySelectorAll('.swiper-hero'),
+			swiperProductClass = document.querySelectorAll('.swiper-product'),
+			swiperSimilarClass = document.querySelectorAll('.swiper-similar')
 
 swiperHeroClass?.forEach((classSwiper) => {
 	const swiper = classSwiper.querySelector('.swiper'),
@@ -25,6 +27,73 @@ swiperHeroClass?.forEach((classSwiper) => {
 			type: 'bullets',
 			clickable: true,
 		},
+	})
+})
+
+swiperProductClass?.forEach((wrapper) => {
+	const swiperMainClass = wrapper.querySelector('.swiper-main'),
+				swiperThumbClass = wrapper.querySelector('.swiper-thumb'),
+				navPrev = wrapper.querySelector('.swiper-button-prev'),
+				navNext = wrapper.querySelector('.swiper-button-next')
+
+	const swiperThumb = new Swiper(swiperThumbClass, {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		freeMode: true,
+		watchSlidesProgress: true,
+	})
+
+	const swiperMain = new Swiper(swiperMainClass, {
+		spaceBetween: 20,
+		grabCursor: true,
+		loop: true,
+
+		navigation: {
+			nextEl: navNext,
+			prevEl: navPrev,
+		},
+
+		thumbs: {
+			swiper: swiperThumb,
+		},
+	})
+
+})
+
+swiperSimilarClass?.forEach((classSwiper) => {
+	const swiper = classSwiper.querySelector('.swiper'),
+		navPrev = classSwiper.querySelector('.swiper-button-prev'),
+		navNext = classSwiper.querySelector('.swiper-button-next')
+
+	new Swiper(swiper, {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		grabCursor: true,
+		loop: true,
+
+		navigation: {
+			prevEl: navPrev,
+			nextEl: navNext,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 30
+			},
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 30
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		}
 	})
 })
 

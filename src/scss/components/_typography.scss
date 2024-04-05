@@ -18,9 +18,10 @@ h2,
 }
 
 p {
+	line-height: 1.5;
 	margin: 0;
 
 	+ p {
-		margin-block-start: 1rem;
+		margin-block-start: 1.375rem;
 	}
 }
