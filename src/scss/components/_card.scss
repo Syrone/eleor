@@ -96,6 +96,7 @@
 	&__image {
 		display: block;
 		object-fit: contain;
+		pointer-events: none;
 		transition: transform var(--transition-duration) var(--transition-type);
 	}
 
