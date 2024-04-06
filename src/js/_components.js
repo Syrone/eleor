@@ -8,3 +8,4 @@ import './components/mixitup.js';
 import './components/counter.js';
 import './components/modals.js';
 import './components/more.js';
+import './components/validate.js';

@@ -20,46 +20,41 @@ counters?.forEach((wrapper) => {
     }
   };
 
-  const handleClickOutside = (event) => {
-    if (!wrapper.contains(event.target)) {
-      handleRemoveActiveClass();
-    }
-  };
-
   const handleBackButton = () => {
     handleRemoveActiveClass();
   };
 
-	input.value = 1;
+  input.value = 1;
 
-	const setInputWidth = () => {
-		const valueLength = input.value.length;
-		input.style.width = `${valueLength}ch`;
-	};
+  const setInputWidth = () => {
+    const valueLength = input.value.length;
+    input.style.width = `${valueLength}ch`;
+  };
 
-	const handleInput = () => {
-		input.value = input.value.replace(/\D/g, '');
-		if (input.value === '') input.value = '0';
-		setInputWidth();
-	};
+  const handleInput = () => {
+    input.value = input.value.replace(/\D/g, '');
+    if (input.value === '') input.value = '1';
+    setInputWidth();
+  };
 
   const handleMinusButtonClick = () => {
-    if (parseInt(input.value) > 0) {
-      input.value = parseInt(input.value) - 1;
-			setInputWidth()
-    }
-  };
+    if (parseInt(input.value) === 1) {
+    handleRemoveActiveClass();
+  } else if (parseInt(input.value) > 1) {
+    input.value = parseInt(input.value) - 1;
+    setInputWidth();
+  }
+};
 
   const handlePlusButtonClick = () => {
     input.value = parseInt(input.value) + 1;
-		setInputWidth()
+    setInputWidth();
   };
-	
+
   counterBtn?.addEventListener('click', handleAddActiveClass);
   document.addEventListener('keydown', handleEscapeKey);
-  document.addEventListener('click', handleClickOutside);
   window.addEventListener('popstate', handleBackButton);
-	input.addEventListener('input', handleInput);
+  input.addEventListener('input', handleInput);
   minusBtn.addEventListener('click', handleMinusButtonClick);
   plusBtn.addEventListener('click', handlePlusButtonClick);
 });

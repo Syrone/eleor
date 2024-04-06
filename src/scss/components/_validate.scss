@@ -1,0 +1,13 @@
+.just-validate {
+
+	&-error {
+
+		&-field {
+			--field-color: var(--invalid-color);
+		}
+
+		&-label {
+			display: none;
+		}
+	}
+}

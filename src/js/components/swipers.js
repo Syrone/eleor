@@ -15,7 +15,12 @@ swiperHeroClass?.forEach((classSwiper) => {
 		slidesPerView: 1,
 		grabCursor: true,
 		loop: true,
-		autoplay : true,
+		speed: 1000,
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 
 		navigation: {
 			prevEl: navPrev,
