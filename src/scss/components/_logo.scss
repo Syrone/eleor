@@ -5,6 +5,18 @@
 
 	&__link {
 		--_color: var(--light-color);
+		--_border: .125rem solid var(--light-color);
+		--_border-radius: .625rem;
+		--_padding-y: .652rem;
+		--_padding-x: .625rem;
+		
+		--_icon-size: 1.25rem;
+
+		--_border-color-active: var(--light-color);
+
+		.icon {
+			width: calc(var(--_icon-size) * 4);
+		}
 	}
 
 	&__image {
