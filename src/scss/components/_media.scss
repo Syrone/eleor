@@ -670,6 +670,19 @@
 		&__content {
 			margin-inline: var(--container-offset);
 		}
+		
+		&__counter {
+			width: 6rem;
+	
+			.counter-form {
+				border-radius: .625rem;
+	
+				.btn-icon {
+					--_size: 1.875rem;
+					--_icon-size: 1rem;
+				}
+			}
+		}
 	}
 
 	// hero

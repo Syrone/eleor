@@ -70,6 +70,10 @@
 		padding: calc(var(--_modal-padding-y) / 1.6) var(--_modal-padding-x);
 	}
 
+	&__counter {
+		width: 9rem;
+	}
+
 	&__body {
 		padding: var(--_modal-padding-y) var(--_modal-padding-x);
 	}

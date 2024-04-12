@@ -62,4 +62,84 @@
 			</form>
 		</div>
 	</div>
+
+	<div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-bag">
+		<div class="graph-modal__content">
+			<div class="graph-modal__header">
+				<div class="logo">
+					<a href="./index.html" class="btn logo__link">
+						<span class="icon">
+							<svg>
+								<use xlink:href="img/logo.svg#svg-logo"></use>
+							</svg>
+						</span>
+					</a>
+				</div>
+
+				<button class="btn btn-icon js-modal-close graph-modal__close" aria-label="Закрыть модальное окно">
+					<span class="icon graph-modal__close-icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			
+			<div class="graph-modal__cart">
+				<div class="graph-modal__counter counter counter--visually js-counter">
+					<div class="counter-form">
+						<button type="button" class="btn btn-icon js-counter-plus">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/plus.svg#svg-plus"></use>
+								</svg>
+							</span>
+						</button>
+						<input type="text" name="counter" class="counter-field js-counter-input">
+						<button type="button" class="btn btn-icon js-counter-minus">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/minus.svg#svg-minus"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+
+				<a href="#" class="btn btn-secondary graph-modal__cart-btn">
+					В корзину
+				</a>
+			</div>
+
+			<form class="form-validate">
+				<div class="graph-modal__body">
+					<h2 class="h2 graph-modal__title">
+						Запросить предложение
+					</h2>
+	
+					<div class="field-wrapper">
+						<input type="text" class="field field--bottom field-name graph-modal__field" name="name" placeholder="Имя" required>
+					</div>
+						
+					<div class="field-wrapper">
+						<input type="tel" class="field field--bottom field-tel graph-modal__field" name="tel" placeholder="Телефон" required>
+					</div>
+						
+					<div class="field-wrapper">
+						<input type="email" class="field field--bottom field-email graph-modal__field" name="email" placeholder="E-mail" required>
+					</div>
+
+					<div class="field-agree">
+						Нажимая «Отправить», я даю свое согласие на обработку <a href="#" class="btn btn-inherit text-underline">персональных данных</a>.
+					</div>
+				</div>
+	
+				<div class="graph-modal__footer">
+					<button type="submit" class="btn btn-dark btn-dark-lg graph-modal__submit">
+						Отправить
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
